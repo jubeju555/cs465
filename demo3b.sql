@@ -1,3 +1,5 @@
+Assume PRAGMA foreign_keys = ON;
+
 DROP TABLE IF EXISTS enrollment;
 DROP TABLE IF EXISTS courses;
 DROP TABLE IF EXISTS students;
