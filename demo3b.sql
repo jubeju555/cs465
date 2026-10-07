@@ -75,6 +75,22 @@ INSERT INTO enrollment (student_id, course_id)
 VALUES (3, 102);
 
 
+-- Add a student without supplying the INTEGER PRIMARY KEY
+
+INSERT INTO students (name, major)
+VALUES ('Frank', NULL);
+
+SELECT student_id, name, major
+FROM students
+WHERE name = 'Frank';
+
+-- Insert Emma if student_id 5 is missing; otherwise update the major
+
+INSERT INTO students (student_id, name, major)
+VALUES (5, 'Emma', 'CS')
+ON CONFLICT (student_id) DO UPDATE SET major = excluded.major;
+
+
 -- Display starting data
 
 SELECT * FROM students;
