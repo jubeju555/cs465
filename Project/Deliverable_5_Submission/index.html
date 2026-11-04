@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keep Knoxville Beautiful</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">K</span><div><strong>Keep Knoxville Beautiful</strong><small>Operations dashboard</small></div></div>
+    <button class="button button-light" id="refreshButton">Refresh data</button>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div><p class="eyebrow">Community operations</p><h1>Make every cleanup count.</h1><p class="hero-copy">Coordinate events, volunteers, and supplies from one clear workspace.</p></div>
+      <div class="hero-accent"><span>●</span><span>●</span><span>●</span></div>
+    </section>
+    <section class="stats" id="stats"></section>
+    <div id="notice" class="notice" hidden></div>
+    <section class="grid-layout">
+      <div class="card events-card">
+        <div class="card-heading"><div><p class="eyebrow">Calendar</p><h2>Events</h2></div><button class="button button-primary" id="addVolunteerButton">+ Add volunteer</button></div>
+        <div class="filters"><label><span>Search</span><input id="searchInput" placeholder="Event or location"></label><label><span>Status</span><select id="statusFilter"><option value="">All statuses</option><option>planned</option><option>open</option><option>completed</option><option>cancelled</option></select></label></div>
+        <div id="eventsList" class="event-list"></div>
+      </div>
+      <aside class="card upcoming-card"><div class="card-heading"><div><p class="eyebrow">Next up</p><h2>Upcoming events</h2></div></div><div id="upcomingList"></div></aside>
+    </section>
+    <section class="grid-layout lower">
+      <div class="card"><div class="card-heading"><div><p class="eyebrow">Reporting</p><h2>Activity summary</h2></div><button class="button button-quiet" id="activityButton">Load report</button></div><div id="activityTable" class="table-wrap"><p class="muted">Load the full event activity report.</p></div></div>
+      <div class="card"><div class="card-heading"><div><p class="eyebrow">Inventory</p><h2>Supply levels</h2></div><button class="button button-quiet" id="inventoryButton">View inventory</button></div><div id="inventoryTable" class="table-wrap"><p class="muted">Review current stock and reorder levels.</p></div></div>
+    </section>
+  </main>
+  <dialog id="eventDialog" class="dialog"><button class="dialog-close" data-close>&times;</button><div id="eventDetail"></div></dialog>
+  <dialog id="volunteerDialog" class="dialog"><button class="dialog-close" data-close>&times;</button><p class="eyebrow">New record</p><h2>Add a volunteer</h2><form id="volunteerForm"><label>First name<input name="first_name" required></label><label>Last name<input name="last_name" required></label><label>Email<input name="email" type="email" required></label><label>Phone <small>(optional)</small><input name="phone"></label><button class="button button-primary" type="submit">Add volunteer</button></form></dialog>
+</body>
+</html>
