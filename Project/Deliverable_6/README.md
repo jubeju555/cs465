@@ -1,8 +1,9 @@
-# Keep Knoxville Beautiful - Deliverable 5
+# Keep Knoxville Beautiful - Deliverable 6
 
-This submission includes a locally hosted Python 3 web application and a
-command-line application. Both use SQLite as the primary persistent data
-store. No external Python packages are required.
+This final submission includes a locally hosted Python 3 web application, a
+command-line application, the database design ERD, and SQL query and
+transaction scripts. Both applications use SQLite as the primary persistent
+data store. No external Python packages are required.
 
 ## Setup
 
@@ -84,4 +85,8 @@ missing records, and insufficient inventory receive user-friendly messages.
 - `static/` - responsive CSS and frontend JavaScript
 - `schema.sql` - database schema and `event_activity_summary` view
 - `insert_data.sql` - reproducible sample data
+- `queries.sql` - reporting queries
+- `transaction.sql` - transaction demonstration
+- `run_queries.sh` - database recreation and validation script
+- `erd.png` - final database entity-relationship diagram
 - `README.md` - setup and operation instructions

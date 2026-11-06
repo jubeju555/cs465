@@ -19,4 +19,4 @@ echo "Running transaction demonstration..."
 sqlite3 -header -column "$DB_FILE" < "$SCRIPT_DIR/transaction.sql"
 
 echo
-echo "Database recreation and Deliverable 4 checks completed."
+echo "Database recreation and Deliverable 6 checks completed."
